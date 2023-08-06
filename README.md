@@ -1,6 +1,6 @@
 # haris-newsapi
 
-#Description
+## Description
 This News API Project is a web application that allows users to access real-time news updates from various reliable sources across the globe. With an intuitive and user-friendly interface, users can stay informed about breaking stories, trending topics and critical events.
 
 ## Features
