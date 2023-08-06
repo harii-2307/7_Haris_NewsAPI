@@ -1,6 +1,6 @@
 const API_KEY = "2f81b6da98b64eeb9cff1aac55edbf68";
 
-const baseUrl = "http://127.0.0.1:5000/fetchData";
+const baseUrl = "https://haris-newsapi.onrender.com/fetchData?q=technology&apiKey=2f81b6da98b64eeb9cff1aac55edbf68";
 const cardsContainer = document.getElementById("cards-container");
 const newsCardTemplate = document.getElementById("template-news-card");
 
@@ -10,13 +10,15 @@ function reload() {
   window.location.reload();
 }
 
+
 async function fetchNews(query) {
-  const url = `${baseUrl}?q=${query}&apiKey=${API_KEY}`;
+  const url = `${baseUrl}?q=${query}`;
   const res = await fetch(url);
   const data = await res.json();
   console.log(data);
   bindData(data.articles);
 }
+
 
 function bindData(articles) {
   cardsContainer.innerHTML = "";
